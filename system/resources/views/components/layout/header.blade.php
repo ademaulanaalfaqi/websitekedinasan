@@ -102,7 +102,7 @@
                             </li>
                             <li class="dropdown"><a href="#">Publikasi</a>
                                 <ul>
-                                    <li><a href="blog.html">Berita</a></li>
+                                    <li><a href="{{url('berita')}}">Berita</a></li>
                                     <li><a href="blog-grid.html">Artikel</a></li>
                                     <li><a href="blog-details.html">Standar Pelayanan</a></li>
                                     <li><a href="blog-details.html">Dokumen Publik</a></li>
@@ -172,7 +172,7 @@
                             </li>
                             <li class="dropdown"><a href="#">Publikasi</a>
                                 <ul>
-                                    <li><a href="blog.html">Berita</a></li>
+                                    <li><a href="{{url('berita')}}">Berita</a></li>
                                     <li><a href="blog-grid.html">Artikel</a></li>
                                     <li><a href="blog-details.html">Standar Pelayanan</a></li>
                                     <li><a href="blog-details.html">Dokumen Publik</a></li>
