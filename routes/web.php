@@ -22,3 +22,4 @@ Route::get('visi-misi', [WebController::class, 'visimisi']);
 Route::get('maklumat', [WebController::class, 'maklumat']);
 Route::get('selayang-pandang', [WebController::class, 'selayangpandang']);
 Route::get('struktur-organisasi', [WebController::class, 'strukturorganisasi']);
+Route::get('pegawai-opd', [WebController::class, 'pegawaiopd']);

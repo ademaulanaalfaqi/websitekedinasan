@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Brighton : Industry HTML Template | Home style one</title>
+<title>{{$config['singkatan_website']}}</title>
 <!-- Stylesheets -->
 <link href="/assets/css/bootstrap.css" rel="stylesheet">
 <link href="/assets/css/revolution-slider.css" rel="stylesheet">
@@ -33,7 +33,7 @@
             	<!--Top Left-->
             	<div class="top-left pull-left">
                     <ul class="links-nav clearfix">
-                        <li><span class="fa fa-bell-o"></span> Selamat datang di website DSP3AKB KABUPATEN KETAPANG</li>
+                        <li><span class="fa fa-bell-o"></span> Selamat datang di website {{$config['nama_website']}}</li>
                     </ul>
                 </div>
                 
@@ -53,7 +53,9 @@
             	<div class="clearfix">
                 	
                 	<div class="pull-left logo-outer">
-                    	<div class="logo"><a href="index.html"><img src="assets/images/logo.png" alt="Brighton" title="Brighton"></a></div>
+                    	<div class="logo" style="height: 90px">
+                            <a href=""><img style="height: 100%" src="http://kantorkite.ketapangkab.go.id/public/{{ $config['logo'] }}" alt="Brighton" title="Brighton"></a>
+                        </div>
                     </div>
                     
                     <div class="pull-right upper-right clearfix">
@@ -63,7 +65,7 @@
                         	<div class="icon-box"><span class="flaticon-technology"></span></div>
                             <ul>
                                 <li>Panggil Kami</li>
-                            	<li><strong>+1 - 000 - 8990 - 1560</strong></li>
+                            	<li><strong>{{$config['phone']}}</strong></li>
                             </ul>
                         </div>
                         
@@ -85,7 +87,7 @@
                             <div class="icon-box"><span class="flaticon-location-pin"></span></div>
                             <ul>
                                 <li>Alamat</li>
-                            	<li><strong>Jalan anok</strong></li>
+                            	<li><strong>{{$config['alamat']}}</strong></li>
                             </ul>
                             
                         </div>
@@ -104,7 +106,7 @@
     <!--Title-->
     <section class="page-title" style="background-image:url(assets/images/background/bgbg.jpg);">
         <div class="auto-container">
-            <h1>Struktur Organisasi {{$config['singkatan_website']}}</h1>
+            <h1>Pegawai OPD</h1>
         </div>
         
         <!--page-info-->
@@ -115,7 +117,7 @@
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <ul class="bread-crumb clearfix">
                             <li><a href="index.html">Home</a></li>
-                            <li class="active">Struktur Organisasi</li>
+                            <li class="active">Pegawai OPD</li>
                         </ul>
                     </div>
                 
@@ -124,30 +126,39 @@
         </div>
         
     </section>
-    
-    <!--struktur organisasi-->
-    <section class="service-style-one">
-        <div class="auto-container">
-            <div class="row clearfix">
-                
-                <div class="col-md-12 col-sm-12">
 
-                    <div class="text" style="color: #393939; font-size: 26px"><strong>Struktur Organisasi {{$config['singkatan_website']}}</strong></div>
-                
-                    <div class="row clearfix">
-                        <!--service-block-->
-                        <div class="service-block col-md-12 col-sm-6 col-sm-12">
-                            <div class="inner-box">
-                                <img src="http://kantorkite.ketapangkab.go.id/public/{{$profil['struktur_organisasi']}}" alt="">
+    <!--pegawai-->
+    <section class="professionals">
+    	<div class="auto-container">
+        
+        	<div class="sec-title-four">
+            	<h2>Pegawai {{$config['singkatan_website']}}</h2>
+            </div>
+        	
+        	<div class="row clearfix">
+                @foreach ($list_slider as $item)
+                    <div class="team-style-one col-md-3 col-sm-6 col-xs-12">
+                        <!--inner-box-->
+                        <div class="inner-box">
+                            <figure class="image">
+                                <img src="assets/images/resource/team-image-1.jpg" alt="" />
+                            </figure>
+                            
+                            <div class="overlay-box">
+                                <div class="lower-content">
+                                <h3>{{$item['judul']}}</h3>
+                                <div class="designation">- Chief Engineer -</div>                            
                             </div>
+                            </div>
+                            
                         </div>
-                        
-                    </div>
-                </div>
+                    </div>                    
+                @endforeach
+
             </div>
         </div>
     </section>
-    
+
     <!--Main Footer-->
     <footer class="main-footer">
     	
@@ -172,7 +183,7 @@
                             <div class="col-lg-12 col-sm-6 col-xs-12 column">
                                 <div class="footer-widget logo-widget">
                                     <div class="logo" style="height: 300px">
-                                        <a href="index.html"><img src="assets/images/logo-ktp.png" class="img-responsive" alt="" style="height: 100%;"></a>
+                                        <a href=""><img src="http://kantorkite.ketapangkab.go.id/public/{{ $config['logo'] }}" class="img-responsive" alt="" style="height: 100%;"></a>
                                     </div>
                                 </div>
                             </div>
@@ -185,13 +196,13 @@
                     	<div class="row clearfix">
                             <div class="col-lg-12 col-sm-6 col-xs-12 column">
                                 <div class="sec-title-three">
-                                    <h2>Informasi DSP3AKB Kabupaten Ketapang</h2>
+                                    <h2>Informasi {{ $config['singkatan_website'] }}</h2>
                                 </div>
                                 <div class="footer-widget logo-widget">
                                     <ul class="contact-info">
-                                        <li><span class="icon flaticon-technology"></span> +1 - 000 - 8990 - 1560</li>
+                                        <li><span class="icon flaticon-technology"></span> {{ $config['phone'] }}</li>
                                         <li><span class="icon flaticon-mail-2"></span> support@domain.com</li>
-                                    	<li><span class="icon flaticon-pin"></span> 3A07, Serif St, Orleans, USA-170A</li>
+                                    	<li><span class="icon flaticon-pin"></span> {{ $config['alamat'] }}</li>
                                     </ul>
                                 
                                 </div>
@@ -211,9 +222,9 @@
                                     </div>
                                     <div class="footer-widget links-widget">
                                         <ul>
-                                            <li><a href="#">Portal Ketapang</a></li>
-                                            <li><a href="#">SINTARI</a></li>
-                                            <li><a href="#">KantorKite</a></li>
+                                            <li><a href="https://ketapangkab.go.id/">Portal Ketapang</a></li>
+                                            <li><a href="http://sintari.ketapangkab.go.id/">SINTARI</a></li>
+                                            <li><a href="http://kantorkite.ketapangkab.go.id/">KantorKite</a></li>
                                         </ul>
             
                                     </div>
