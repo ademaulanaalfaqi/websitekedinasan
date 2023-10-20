@@ -46,7 +46,7 @@ class WebController extends Controller
             $dataArraySlider = json_decode($responseSlider->getBody(), true);
     
             $dataFilterSlider = array_filter($dataArraySlider, function ($item) {
-                return isset($item['opd_id']) && $item['opd_id'] == '593';
+                return isset($item['opd_id']) && $item['opd_id'] == '567';
             });
     
             $data['list_slider'] = array_slice($dataFilterSlider, 0, 6);

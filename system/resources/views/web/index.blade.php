@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <title>{{$config['singkatan_website']}}</title>
 <!-- Stylesheets -->
-<link href="/assets/css/bootstrap.css" rel="stylesheet">
-<link href="/assets/css/revolution-slider.css" rel="stylesheet">
-<link href="/assets/css/style.css" rel="stylesheet">
+<link href="{{url('public')}}/assets/css/bootstrap.css" rel="stylesheet">
+<link href="{{url('public')}}/assets/css/revolution-slider.css" rel="stylesheet">
+<link href="{{url('public')}}/assets/css/style.css" rel="stylesheet">
 <!--Favicon-->
 <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
 <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
@@ -14,9 +14,9 @@
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<link href="/assets/css/responsive.css" rel="stylesheet">
+<link href="{{url('public')}}/assets/css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="/assets/js/respond.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="{{url('public')}}/assets/js/respond.js"></script><![endif]-->
 </head>
 
 <body>
@@ -110,12 +110,12 @@
             <div class="tp-banner">
                 <ul>
                 	
-                    @foreach ($slider as $item)
+                    @foreach ($list_slider as $item)
                         <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="assets/images/main-slider/1.jpg"  data-saveperformance="off"  data-title="Awesome Title Here">
-                        <img src="assets/images/main-slider/anya.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                        <img src="http://kantorkite.ketapangkab.go.id/public/{{$item['foto']}}"  alt=""  data-bgposition="center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                         
                         <!--Overlay-->
-                        <div class="overlay-style-one"></div>
+                        {{-- <div class="overlay-style-one"></div> --}}
                         
                         <div class="tp-caption sfl sfb tp-resizeme"
                         data-x="left" data-hoffset="15"
@@ -128,7 +128,7 @@
                         data-elementdelay="0.01"
                         data-endelementdelay="0.3"
                         data-endspeed="1200"
-                        data-endeasing="Power4.easeIn"><div class="border-title"></div></div>
+                        data-endeasing="Power4.easeIn"><div class="border-title">{{$item['judul']}}</div></div>
                         
                         <div class="tp-caption sfl sfb tp-resizeme"
                         data-x="left" data-hoffset="15"
@@ -145,6 +145,54 @@
                         
                         </li>                        
                     @endforeach
+
+                    <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/3.jpg"  data-saveperformance="off"  data-title="Awesome Title Here">
+                        <img src="images/main-slider/3.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        
+                        <!--Overlay Style Three-->
+                        <div class="overlay-style-three"></div>
+                        
+                        <div class="tp-caption sfl sfb tp-resizeme"
+                        data-x="center" data-hoffset="0"
+                        data-y="center" data-voffset="-100"
+                        data-speed="1500"
+                        data-start="0"
+                        data-easing="easeOutExpo"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.01"
+                        data-endelementdelay="0.3"
+                        data-endspeed="1200"
+                        data-endeasing="Power4.easeIn"><div class="subtitle-text">We are Brighton Industry</div></div>
+                        
+                        <div class="tp-caption text-center sft sfb tp-resizeme"
+                        data-x="center" data-hoffset="0"
+                        data-y="center" data-voffset="-20"
+                        data-speed="1500"
+                        data-start="0"
+                        data-easing="easeOutExpo"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.01"
+                        data-endelementdelay="0.3"
+                        data-endspeed="1200"
+                        data-endeasing="Power4.easeIn"><h2>We are the Top Industrial Manufacturer providing<br> the highest quality products</h2></div>
+                        
+                        <div class="tp-caption sfr sfb tp-resizeme"
+                        data-x="center" data-hoffset="0"
+                        data-y="center" data-voffset="90"
+                        data-speed="1500"
+                        data-start="1000"
+                        data-easing="easeOutExpo"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.01"
+                        data-endelementdelay="0.3"
+                        data-endspeed="1200"
+                        data-endeasing="Power4.easeIn"><a href="#" class="theme-btn btn-style-one">contact us</a></div>
+                        
+                        
+                        </li>
                      
                 </ul>
                 
@@ -530,13 +578,13 @@
 <div class="scroll-to-top scroll-to-target" data-target=".main-header"><span class="icon fa fa-long-arrow-up"></span></div>
 
 
-<script src="/assets/js/jquery.js"></script> 
-<script src="/assets/js/bootstrap.min.js"></script>
-<script src="/assets/js/revolution.min.js"></script>
-<script src="/assets/js/jquery.fancybox.pack.js"></script>
-<script src="/assets/js/jquery.fancybox-media.js"></script>
-<script src="/assets/js/owl.js"></script>
-<script src="/assets/js/wow.js"></script>
-<script src="/assets/js/script.js"></script>
+<script src="{{url('public')}}/assets/js/jquery.js"></script> 
+<script src="{{url('public')}}/assets/js/bootstrap.min.js"></script>
+<script src="{{url('public')}}/assets/js/revolution.min.js"></script>
+<script src="{{url('public')}}/assets/js/jquery.fancybox.pack.js"></script>
+<script src="{{url('public')}}/assets/js/jquery.fancybox-media.js"></script>
+<script src="{{url('public')}}/assets/js/owl.js"></script>
+<script src="{{url('public')}}/assets/js/wow.js"></script>
+<script src="{{url('public')}}/assets/js/script.js"></script>
 </body>
 </html>
