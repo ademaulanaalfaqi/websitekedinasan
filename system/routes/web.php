@@ -16,10 +16,11 @@ use App\Http\Controllers\Web\WebController;
 */
 
 
-Route::get('/', [WebController::class, 'index']);
+Route::get('/', [WebController::class, 'beranda']);
 Route::get('tentang', [WebController::class, 'tentang']);
 Route::get('visi-misi', [WebController::class, 'visimisi']);
 Route::get('maklumat', [WebController::class, 'maklumat']);
 Route::get('selayang-pandang', [WebController::class, 'selayangpandang']);
 Route::get('struktur-organisasi', [WebController::class, 'strukturorganisasi']);
 Route::get('pegawai-opd', [WebController::class, 'pegawaiopd']);
+Route::get('detail-berita/{slug}', [WebController::class, 'detailberita']);
