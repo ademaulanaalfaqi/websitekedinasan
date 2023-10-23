@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\Base\BaseController;
+use App\Http\Controllers\Web\BerandaController;
+use App\Http\Controllers\Web\ProfilController;
+use App\Http\Controllers\Web\PublikasiController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Web\WebController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +16,17 @@ use App\Http\Controllers\Web\WebController;
 |
 */
 
+// beranda
+Route::get('/', [BerandaController::class, 'beranda']);
 
-Route::get('/', [WebController::class, 'index']);
-Route::get('tentang', [WebController::class, 'tentang']);
-Route::get('visi-misi', [WebController::class, 'visimisi']);
-Route::get('maklumat', [WebController::class, 'maklumat']);
-Route::get('selayang-pandang', [WebController::class, 'selayangpandang']);
-Route::get('struktur-organisasi', [WebController::class, 'strukturorganisasi']);
-Route::get('pegawai-opd', [WebController::class, 'pegawaiopd']);
+// profil
+Route::get('tentang', [ProfilController::class, 'tentang']);
+Route::get('visi-misi', [ProfilController::class, 'visimisi']);
+Route::get('maklumat', [ProfilController::class, 'maklumat']);
+Route::get('selayang-pandang', [ProfilController::class, 'selayangpandang']);
+Route::get('struktur-organisasi', [ProfilController::class, 'strukturorganisasi']);
+Route::get('pegawai-opd', [ProfilController::class, 'pegawaiopd']);
+
+// publikasi
+Route::get('berita', [PublikasiController::class, 'berita']);
+Route::get('detail-berita/{slug}', [PublikasiController::class, 'detailberita']);

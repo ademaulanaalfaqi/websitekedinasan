@@ -2426,6 +2426,7 @@ img{
 .service-block-two{
 	position:relative;
 	margin-bottom:50px;	
+	height: 100px;
 }
 
 .service-block-two .inner-box{

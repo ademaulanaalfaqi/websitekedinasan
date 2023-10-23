@@ -26,7 +26,7 @@ class CostumProvider extends ServiceProvider
             $dataArrayConfig = json_decode($responseConfig->getBody(), true);
 
             $dataFilterConfig = collect($dataArrayConfig)->first(function ($item) {
-                return isset($item['opd_id']) && $item['opd_id'] == '593';
+                return isset($item['opd_id']) && $item['opd_id'] == '567';
             });
             $config = array_slice($dataFilterConfig, 0);
 
@@ -39,7 +39,7 @@ class CostumProvider extends ServiceProvider
             ]);
             $dataArrayProfil = json_decode($responseProfil->getBody(), true);
             $dataFilterProfil = collect($dataArrayProfil)->first(function ($item) {
-                return isset($item['opd_id']) && $item['opd_id'] == '593';
+                return isset($item['opd_id']) && $item['opd_id'] == '567';
             });
             $profil = array_slice($dataFilterProfil, 0);
 
