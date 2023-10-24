@@ -3,7 +3,7 @@
     <!--Title-->
     <section class="page-title" style="background-image:url({{ url('public') }}/assets/images/background/17580.jpg);">
         <div class="auto-container">
-            <h1>Standar Pelayanan {{$config['singkatan_website']}}</h1>
+            <h1>Laporan SKM {{$config['singkatan_website']}}</h1>
         </div>
 
         <!--page-info-->
@@ -14,7 +14,7 @@
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <ul class="bread-crumb clearfix">
                             <li><a href="{{ url('/') }}">Home</a></li>
-                            <li class="active">Standar Pelayanan</li>
+                            <li class="active">Laporan SKM</li>
                         </ul>
                     </div>
 

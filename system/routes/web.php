@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\Web\BerandaController;
+use App\Http\Controllers\Web\InformasiController;
 use App\Http\Controllers\Web\ProfilController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Web\PublikasiController;
+use App\Http\Controllers\Web\RuangPublikController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +31,8 @@ Route::get('pegawai-opd', [ProfilController::class, 'pegawaiopd']);
 Route::get('berita', [PublikasiController::class, 'berita']);
 Route::get('detail-berita/{slug}', [PublikasiController::class, 'detailberita']);
 Route::get('standar-pelayanan', [PublikasiController::class, 'standarpelayanan']);
+
+Route::get('laporan-skm', [RuangPublikController::class, 'laporanskm']);
+Route::get('laporan-tindak-lanjut-skm', [RuangPublikController::class, 'laporantindaklanjut']);
+
+Route::get('informasi', [InformasiController::class, 'informasi']);

@@ -112,12 +112,12 @@
                             <li class="dropdown"><a href="#">Ruang Publik</a>
                                 <ul>
                                     <li><a href="portfolio-masonary.html">Kuisioner SKM</a></li>
-                                    <li><a href="portfolio-three-column.html">Laporan SKM</a></li>
-                                    <li><a href="portfolio-details.html">Laporan Tindak Lanjut SKM</a></li>
+                                    <li><a href="{{url('laporan-skm')}}">Laporan SKM</a></li>
+                                    <li><a href="{{url('laporan-tindak-lanjut-skm')}}">Laporan Tindak Lanjut SKM</a></li>
                                 </ul>
                             </li>
                             <li><a href="contact.html">PPID</a></li>
-                            <li><a href="contact.html">Informasi</a></li>
+                            <li><a href="{{url('informasi')}}">Informasi</a></li>
                             <li class="dropdown"><a href="#">Galeri</a>
                                 <ul>
                                     <li><a href="shop.html">Galeri Foto</a></li>
@@ -182,12 +182,12 @@
                             <li class="dropdown"><a href="#">Ruang Publik</a>
                                 <ul>
                                     <li><a href="portfolio-masonary.html">Kuisioner SKM</a></li>
-                                    <li><a href="portfolio-three-column.html">Laporan SKM</a></li>
-                                    <li><a href="portfolio-details.html">Laporan Tindak Lanjut SKM</a></li>
+                                    <li><a href="{{url('laporan-skm')}}">Laporan SKM</a></li>
+                                    <li><a href="{{url('laporan-skm')}}">Laporan Tindak Lanjut SKM</a></li>
                                 </ul>
                             </li>
                             <li><a href="contact.html">PPID</a></li>
-                            <li><a href="contact.html">Informasi</a></li>
+                            <li><a href="{{url('informasi')}}">Informasi</a></li>
                             <li class="dropdown"><a href="#">Galeri</a>
                                 <ul>
                                     <li><a href="shop.html">Galeri Foto</a></li>
