@@ -104,7 +104,7 @@
                                 <ul>
                                     <li><a href="{{url('berita')}}">Berita</a></li>
                                     <li><a href="blog-grid.html">Artikel</a></li>
-                                    <li><a href="blog-details.html">Standar Pelayanan</a></li>
+                                    <li><a href="{{url('standar-pelayanan')}}">Standar Pelayanan</a></li>
                                     <li><a href="blog-details.html">Dokumen Publik</a></li>
                                     <li><a href="blog-details.html">Dokumen Kinerja</a></li>
                                 </ul>
@@ -174,7 +174,7 @@
                                 <ul>
                                     <li><a href="{{url('berita')}}">Berita</a></li>
                                     <li><a href="blog-grid.html">Artikel</a></li>
-                                    <li><a href="blog-details.html">Standar Pelayanan</a></li>
+                                    <li><a href="{{url('standar-pelayanan')}}">Standar Pelayanan</a></li>
                                     <li><a href="blog-details.html">Dokumen Publik</a></li>
                                     <li><a href="blog-details.html">Dokumen Kinerja</a></li>
                                 </ul>

@@ -39,33 +39,6 @@
                         </div>
                         
                         
-                        <!--featured-gallery-->
-                        <div class="featured-gallery">
-                            <div class="row clearfix">
-                            
-                            	<!--featured-image-box-->
-                                <div class="featured-image-box col-md-12 col-sm-12 col-xs-12">
-                                	<figure class="image">
-                                    	<a class="lightbox-image" href="images/resource/featured-image-1.jpg" title="Image Caption Here"><img src="images/resource/featured-image-1.jpg" alt="" /></a>
-                                    </figure>
-                                </div>
-                                
-                                <!--featured-image-box-->
-                                <div class="featured-image-box col-md-6 col-sm-6 col-xs-12">
-                                	<figure class="image">
-                                    	<a class="lightbox-image" href="images/resource/featured-image-2.jpg" title="Image Caption Here"><img src="images/resource/featured-image-2.jpg" alt="" /></a>
-                                    </figure>
-                                </div>
-                                
-                                <!--featured-image-box-->
-                                <div class="featured-image-box col-md-6 col-sm-6 col-xs-12">
-                                	<figure class="image">
-                                    	<a class="lightbox-image" href="images/resource/featured-image-3.jpg" title="Image Caption Here"><img src="images/resource/featured-image-3.jpg" alt="" /></a>
-                                    </figure>
-                                </div>
-                                
-                            </div>
-                        </div>
                         
                     </div>
                 </div>

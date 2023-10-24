@@ -272,7 +272,7 @@
             <div class="sec-title-one">
                 <h2>Berita Terbaru {{$config['singkatan_website']}}</h2>
             </div>
-            <div class="row clearfix">
+            <div class="row clearfix border-1">
                 @foreach ($list_berita as $item)
                     <!--Service block two-->
                     <div class="service-block-two col-md-4 col-sm-6 col-xs-12">
