@@ -63,7 +63,7 @@
                         </div>
 					</section>
 					
-                    <!-- Styled Pagination -->
+                    {{-- <!-- Styled Pagination -->
                     <div class="styled-pagination text-left padd-top-30">
                         <ul>
                             <li><a href="#" class="active">1</a></li>
@@ -73,7 +73,7 @@
                             <li><a href="#">10</a></li>
                             <li><a class="next" href="#"><span class="fa fa-long-arrow-right"></span></a></li>
                         </ul>
-                    </div>
+                    </div> --}}
                     
 				</div>
                 <!--Content Side-->
@@ -82,37 +82,4 @@
             </div>
         </div>
     </div>
-
-    <!--berita-->
-    <section class="services-column-two">
-        <div class="auto-container">
-            
-            <!--Section Title-->
-            <div class="sec-title-one">
-                <h2>Berita {{$config['singkatan_website']}}</h2>
-            </div>
-            <div class="row clearfix border-1">
-                @foreach ($list_berita as $item)
-                    <!--Service block two-->
-                    <div class="service-block-two col-md-4 col-sm-6 col-xs-12">
-                        <div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="image-box">
-                                <figure class="image"><a href="{{url('detail-berita', $item['slug'])}}"><img src="http://kantorkite.ketapangkab.go.id/public/{{$item['foto']}}" alt=""></a></figure>
-                            </div>
-                            <div class="lower-content">
-                                <div class="outer-link">
-                                    <a href="{{url('detail-berita', $item['slug'])}}" class="theme-btn service-title"><span class="flaticon-clock"></span> {{$item['created_at']}}</a>
-                                </div>
-                                <div class="text">{{$item['judul']}}</div>
-                                <div class="link-box"><a href="{{url('detail-berita', $item['slug'])}}" class="theme-btn normal-link">VIEW MORE <span class="fa fa-long-arrow-right"></span></a></div>
-                            </div>
-                        </div>
-                    </div>                    
-                @endforeach
-                
-            </div>
-            
-            
-        </div>
-    </section>
 @endsection
