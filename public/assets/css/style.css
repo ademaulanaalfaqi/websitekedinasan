@@ -5576,6 +5576,11 @@ img{
 	margin-bottom:34px;
 }
 
+.services-content .lower-image{
+	position:relative;
+	margin-bottom:34px;
+}
+
 .services-content .bigger-image img{
 	position:relative;
 	width:100%;
