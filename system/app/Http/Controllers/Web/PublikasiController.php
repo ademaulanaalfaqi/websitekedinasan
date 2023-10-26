@@ -29,6 +29,7 @@ class PublikasiController extends Controller
             });
             $listBerita = array_slice($dataFilterBerita, 0);
             $data['list_berita'] = $this->paginate($listBerita);
+            $data['list_berita']->withPath('berita');
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
         }
@@ -39,11 +40,7 @@ class PublikasiController extends Controller
     {
         $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
         $items = $items instanceof Collection ? $items : Collection::make($items);
-        $paginator = new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, $options);
-
-        $paginator->setPath('/berita');
-
-        return $paginator;
+        return new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, $options);
     }
 
     function detailberita($slug)

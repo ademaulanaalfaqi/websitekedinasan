@@ -196,20 +196,7 @@ class ProfilController extends Controller
     {
         $client = new Client();
 
-        try {
-            // profil
-            $responseProfil = $client->request('GET', 'http://kantorkite.ketapangkab.go.id/api/profil', [
-                'headers' => [
-                    'Accept' => 'application/json',
-                ],
-            ]);
-
-            $dataArrayProfil = json_decode($responseProfil->getBody(), true);
-            $dataFilterProfil = collect($dataArrayProfil)->first(function ($item) {
-                return isset($item['opd_id']) && $item['opd_id'] == '567';
-            });
-            $data['profil'] = array_slice($dataFilterProfil,  0,);
-            
+        try {            
             // config
             $responseConfig = $client->request('GET', 'http://kantorkite.ketapangkab.go.id/api/config', [
                 'headers' => [

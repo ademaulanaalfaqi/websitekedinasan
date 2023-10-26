@@ -3,7 +3,7 @@
     <!--Title-->
     <section class="page-title" style="background-image:url({{url('public')}}/assets/images/background/17580.jpg);">
         <div class="auto-container">
-            <h1>Visi dan Misi {{$config['singkatan_website']}}</h1>
+            <h1>Visi dan Misi</h1>
         </div>
         
         <!--page-info-->
@@ -31,7 +31,9 @@
                 
                 <div class="col-md-12 col-sm-12">
 
-                    <div class="text" style="color: #393939; font-size: 26px"><strong>{{$config['singkatan_website']}}</strong></div>
+                    <div class="sec-title-one">
+                        <h2 style="font-size: 30px">Visi dan Misi {{$config['singkatan_website']}}</h2>
+                    </div>
                 
                     <div class="row clearfix">
                         <!--service-block-->

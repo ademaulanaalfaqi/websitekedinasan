@@ -111,7 +111,7 @@
                             </li>
                             <li class="dropdown"><a href="#">Ruang Publik</a>
                                 <ul>
-                                    <li><a href="portfolio-masonary.html">Kuisioner SKM</a></li>
+                                    <li><a href="https://bit.ly/SKMKetapang" target="_blank">Kuisioner SKM</a></li>
                                     <li><a href="{{url('laporan-skm')}}">Laporan SKM</a></li>
                                     <li><a href="{{url('laporan-tindak-lanjut-skm')}}">Laporan Tindak Lanjut SKM</a></li>
                                 </ul>
@@ -181,7 +181,7 @@
                             </li>
                             <li class="dropdown"><a href="#">Ruang Publik</a>
                                 <ul>
-                                    <li><a href="portfolio-masonary.html">Kuisioner SKM</a></li>
+                                    <li><a href="https://bit.ly/SKMKetapang" target="_blank">Kuisioner SKM</a></li>
                                     <li><a href="{{url('laporan-skm')}}">Laporan SKM</a></li>
                                     <li><a href="{{url('laporan-skm')}}">Laporan Tindak Lanjut SKM</a></li>
                                 </ul>
