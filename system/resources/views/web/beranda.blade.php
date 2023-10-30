@@ -158,22 +158,28 @@
                     <div class="team-style-one col-md-3 col-sm-6 col-xs-12">
                         <!--inner-box-->
                         <div class="inner-box">
-                            <figure class="image">
-                                <img src="{{ url('public') }}/assets/images/resource/team-image-1.jpg" alt="" />
+                            <figure class="image" style="height: 350px; overflow: hidden;">
+                                <img src="{{$item['pegawai_gambar']}}" alt="Foto Pegawai" style="width: 100%; height: 100%; object-fit: cover;"/>
+                                {{-- <img src="assets/images/resource/team-image-1.jpg" alt="" /> --}}
                             </figure>
-
+                            
                             <div class="overlay-box">
                                 <div class="lower-content">
-                                    <h3>MIKE DUDLEY</h3>
-                                    <div class="designation">- Chief Engineer -</div>
-                                </div>
+                                    <h3>{{$item['nama']}}</h3>
+                                    <div class="designation">{{$item['jabatan']}}</div>
+                                </div>                            
                             </div>
-
+                            
                         </div>
-                    </div>
+                    </div>        
                 @endforeach
 
             </div>
+
+            <div class="sec-title-four" style="margin-top: 30px;">
+                <a href="{{url('pegawai-opd')}}" class="btn-lg btn-primary" style="margin-top: 15px"><strong>Pegawai Lainnya</strong></a>
+            </div>
+
         </div>
     </section>
 

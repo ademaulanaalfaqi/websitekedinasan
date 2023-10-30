@@ -210,20 +210,20 @@ class ProfilController extends Controller
             });
             $data['config'] = array_slice($dataFilterConfig,  0,);
             
-            // 
-            $responseSlider = $client->request('GET', 'http://kantorkite.ketapangkab.go.id/api/slider', [
+            // for pegawai
+            $responsePegawai = $client->request('GET', 'http://kantorkite.ketapangkab.go.id/api/pegawai', [
                 'headers' => [
                     'Accept' => 'application/json',
                 ],
             ]);
     
-            $dataArraySlider = json_decode($responseSlider->getBody(), true);
+            $dataArrayPegawai = json_decode($responsePegawai->getBody(), true);
     
-            $dataFilterSlider = array_filter($dataArraySlider, function ($item) {
-                return isset($item['opd_id']) && $item['opd_id'] == '593';
+            $dataFilterPegawai = array_filter($dataArrayPegawai, function ($item) {
+                return isset($item['pegawai_opd_gabung']) && $item['pegawai_opd_gabung'] == '567';
             });
     
-            $data['list_slider'] = array_slice($dataFilterSlider, 0, 6);
+            $data['list_pegawai'] = array_slice($dataFilterPegawai, 0);
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
         }

@@ -79,10 +79,11 @@ class BerandaController extends Controller
             $dataArrayPegawai = json_decode($responsePegawai->getBody(), true);
     
             $dataFilterPegawai = array_filter($dataArrayPegawai, function ($item) {
-                return isset($item['opd_id']) && $item['opd_id'] == '567';
+                return isset($item['pegawai_opd_gabung']) && $item['pegawai_opd_gabung'] == '567';
             });
     
-            $data['list_pegawai'] = array_slice($dataFilterPegawai, 0, 3);
+            $data['list_pegawai'] = array_slice($dataFilterPegawai, 0, 4);
+            // dd($data['list_pegawai']);
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
         }
