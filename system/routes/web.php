@@ -1,11 +1,14 @@
 <?php
 
 use App\Http\Controllers\Web\BerandaController;
+use App\Http\Controllers\Web\FaqController;
 use App\Http\Controllers\Web\InformasiController;
 use App\Http\Controllers\Web\ProfilController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Web\PublikasiController;
 use App\Http\Controllers\Web\RuangPublikController;
+use App\Http\Controllers\Web\GaleriController;
+use App\Http\Controllers\Web\KontakController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +39,10 @@ Route::get('laporan-skm', [RuangPublikController::class, 'laporanskm']);
 Route::get('laporan-tindak-lanjut-skm', [RuangPublikController::class, 'laporantindaklanjut']);
 
 Route::get('informasi', [InformasiController::class, 'informasi']);
+
+Route::get('foto', [GaleriController::class, 'foto']);
+Route::get('vidio', [GaleriController::class, 'vidio']);
+
+Route::get('kontak', [KontakController::class, 'kontak']);
+
+Route::get('faq', [FaqController::class, 'faq']);

@@ -120,12 +120,12 @@
                             <li><a href="{{url('informasi')}}">Informasi</a></li>
                             <li class="dropdown"><a href="#">Galeri</a>
                                 <ul>
-                                    <li><a href="shop.html">Galeri Foto</a></li>
-                                    <li><a href="shop.html">Galeri Video</a></li>
+                                    <li><a href="{{url('foto')}}">Galeri Foto</a></li>
+                                    <li><a href="{{url('vidio')}}">Galeri Video</a></li>
                                 </ul>
                             </li>
                             <li><a href="contact.html">Kontak</a></li>
-                            <li><a href="contact.html">FAQ</a></li>
+                            <li><a href="{{url('faq')}}">FAQ</a></li>
                             <li class="dropdown"><a href="#">Pengaduan</a>
                                 <ul>
                                     <li><a href="shop.html">SP4N Laporan</a></li>
@@ -190,7 +190,7 @@
                             <li><a href="{{url('informasi')}}">Informasi</a></li>
                             <li class="dropdown"><a href="#">Galeri</a>
                                 <ul>
-                                    <li><a href="shop.html">Galeri Foto</a></li>
+                                    <li><a href="{{url('foto')}}">Galeri Foto</a></li>
                                     <li><a href="shop.html">Galeri Video</a></li>
                                 </ul>
                             </li>
