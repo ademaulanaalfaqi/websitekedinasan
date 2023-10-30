@@ -3,7 +3,7 @@
     <!--Title-->
     <section class="page-title" style="background-image:url({{ url('public') }}/assets/images/background/17580.jpg);">
         <div class="auto-container">
-            <h1>Laporan SKM {{$config['singkatan_website']}}</h1>
+            <h1>Laporan SKM</h1>
         </div>
 
         <!--page-info-->
@@ -29,6 +29,9 @@
 
                 <!--Content Side-->
                 <div class="content-side col-lg-12 col-md-8 col-sm-12 col-xs-12">
+                    <div class="sec-title-one">
+                        <h2 style="font-size: 30px">Laporan SKM {{$config['singkatan_website']}}</h2>
+                    </div>
                     <section class="news-outer">
                         <div class="news-style-two">
                             <div class="inner-box">
@@ -43,10 +46,12 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Mark</td>
-                                            </tr>
+                                            @foreach ($list_laporanskm as $item)
+                                                <tr>
+                                                    <th scope="row">{{$loop->iteration}}</th>
+                                                    <td><a href="{{url('dokumen-publik', $item['slug'])}}">{{$item['judul_publikasi']}}</a></td>
+                                                </tr>                                                
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

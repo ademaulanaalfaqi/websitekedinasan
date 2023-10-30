@@ -39,7 +39,7 @@ class BerandaController extends Controller
             });
             $data['config'] = array_slice($dataFilterConfig,  0,);
             
-            // 
+            // loop slider
             $responseSlider = $client->request('GET', 'http://kantorkite.ketapangkab.go.id/api/slider', [
                 'headers' => [
                     'Accept' => 'application/json',
@@ -54,7 +54,7 @@ class BerandaController extends Controller
     
             $data['list_slider'] = array_slice($dataFilterSlider, 0);
 
-            // berita
+            // loop berita
             $responseBerita = $client->request('GET', 'http://kantorkite.ketapangkab.go.id/api/berita', [
                 'headers' => [
                     'Accept' => 'application/json',
@@ -68,6 +68,22 @@ class BerandaController extends Controller
             });
     
             $data['list_berita'] = array_slice($dataFilterBerita, 0, 3);
+
+            // loop pegawai
+            $responsePegawai = $client->request('GET', 'http://kantorkite.ketapangkab.go.id/api/pegawai', [
+                'headers' => [
+                    'Accept' => 'application/json',
+                ],
+            ]);
+    
+            $dataArrayPegawai = json_decode($responsePegawai->getBody(), true);
+    
+            $dataFilterPegawai = array_filter($dataArrayPegawai, function ($item) {
+                return isset($item['pegawai_opd_gabung']) && $item['pegawai_opd_gabung'] == '567';
+            });
+    
+            $data['list_pegawai'] = array_slice($dataFilterPegawai, 0, 4);
+            // dd($data['list_pegawai']);
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
         }

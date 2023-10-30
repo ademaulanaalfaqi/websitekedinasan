@@ -21,9 +21,10 @@ use App\Http\Controllers\Web\KontakController;
 |
 */
 
-
+// beranda
 Route::get('/', [BerandaController::class, 'beranda']);
 
+// profil
 Route::get('tentang', [ProfilController::class, 'tentang']);
 Route::get('visi-misi', [ProfilController::class, 'visimisi']);
 Route::get('maklumat', [ProfilController::class, 'maklumat']);
@@ -31,13 +32,17 @@ Route::get('selayang-pandang', [ProfilController::class, 'selayangpandang']);
 Route::get('struktur-organisasi', [ProfilController::class, 'strukturorganisasi']);
 Route::get('pegawai-opd', [ProfilController::class, 'pegawaiopd']);
 
+// publikasi
 Route::get('berita', [PublikasiController::class, 'berita']);
 Route::get('detail-berita/{slug}', [PublikasiController::class, 'detailberita']);
 Route::get('standar-pelayanan', [PublikasiController::class, 'standarpelayanan']);
 
+// ruang publik
 Route::get('laporan-skm', [RuangPublikController::class, 'laporanskm']);
 Route::get('laporan-tindak-lanjut-skm', [RuangPublikController::class, 'laporantindaklanjut']);
+Route::get('dokumen-publik/{slug}', [RuangPublikController::class, 'dokumenpublik']);
 
+// informasi
 Route::get('informasi', [InformasiController::class, 'informasi']);
 
 Route::get('foto', [GaleriController::class, 'foto']);

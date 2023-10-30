@@ -63,17 +63,8 @@
                         </div>
 					</section>
 					
-                    {{-- <!-- Styled Pagination -->
-                    <div class="styled-pagination text-left padd-top-30">
-                        <ul>
-                            <li><a href="#" class="active">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">--</a></li>
-                            <li><a href="#">10</a></li>
-                            <li><a class="next" href="#"><span class="fa fa-long-arrow-right"></span></a></li>
-                        </ul>
-                    </div> --}}
+                    <!-- Styled Pagination -->
+                    {{ $list_berita->links() }}
                     
 				</div>
                 <!--Content Side-->

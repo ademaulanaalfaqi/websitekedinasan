@@ -33,19 +33,23 @@
             </div>
         	
         	<div class="row clearfix">
-                @foreach ($list_slider as $item)
+                @foreach ($list_pegawai as $item)
                     <div class="team-style-one col-md-3 col-sm-6 col-xs-12">
                         <!--inner-box-->
                         <div class="inner-box">
-                            <figure class="image">
-                                <img src="assets/images/resource/team-image-1.jpg" alt="" />
+                            <figure class="image" style="height: 350px; overflow: hidden;">
+                                @if ($item['pegawai_gambar'])
+                                    <img src="{{$item['pegawai_gambar']}}" alt="Foto Pegawai" style="width: 100%; height: 100%; object-fit: cover;"/>
+                                @else
+                                    
+                                @endif
                             </figure>
                             
                             <div class="overlay-box">
                                 <div class="lower-content">
-                                <h3>{{$item['judul']}}</h3>
-                                <div class="designation">- Chief Engineer -</div>                            
-                            </div>
+                                    <h3>{{$item['nama']}}</h3>
+                                    <div class="designation">{{$item['jabatan']}}</div>
+                                </div>                            
                             </div>
                             
                         </div>

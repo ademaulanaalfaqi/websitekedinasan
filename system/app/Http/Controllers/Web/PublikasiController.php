@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Collection;
 
 class PublikasiController extends Controller
 {
@@ -24,20 +27,28 @@ class PublikasiController extends Controller
             $dataFilterBerita = array_filter($dataArrayBerita, function ($item) {
                 return isset($item['opd_id']) && $item['opd_id'] == '567';
             });
-    
-            $data['list_berita'] = array_slice($dataFilterBerita, 0);
+            $listBerita = array_slice($dataFilterBerita, 0);
+            $data['list_berita'] = $this->paginate($listBerita);
+            $data['list_berita']->withPath('berita');
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
         }
         return view('web.publikasi.berita', $data);
     }    
 
-    function detailberita()
+    function paginate($items, $perPage = 6, $page = null, $options = [])
+    {
+        $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
+        $items = $items instanceof Collection ? $items : Collection::make($items);
+        return new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, $options);
+    }
+
+    function detailberita($slug)
     {
         $client = new Client();
 
         try {
-            // berita
+            // detail berita
             $responseBerita = $client->request('GET', 'http://kantorkite.ketapangkab.go.id/api/berita', [
                 'headers' => [
                     'Accept' => 'application/json',
@@ -45,10 +56,9 @@ class PublikasiController extends Controller
             ]);
 
             $dataArrayBerita = json_decode($responseBerita->getBody(), true);
-            $dataFilterBerita = collect($dataArrayBerita)->first(function ($item) {
-                return isset($item['opd_id']) && $item['opd_id'] == '567';
-            });
-            $data['berita'] = array_slice($dataFilterBerita,  0,);
+            $dataBerita = collect($dataArrayBerita);
+            $dataFilterBerita = $dataBerita->where('slug', $slug)->first();
+            $data['berita'] = $dataFilterBerita;
 
             // for berita
             $responseBerita = $client->request('GET', 'http://kantorkite.ketapangkab.go.id/api/berita', [

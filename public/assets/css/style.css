@@ -2131,6 +2131,7 @@ img{
 .sec-title-one h2{
 	position:relative;
     color: #012f5d;
+	font-family: 'Source Sans Pro';
     font-size: 24px;
 	font-weight:600;
     padding-bottom: 15px;
@@ -5572,6 +5573,11 @@ img{
 }
 
 .services-content .bigger-image{
+	position:relative;
+	margin-bottom:34px;
+}
+
+.services-content .lower-image{
 	position:relative;
 	margin-bottom:34px;
 }
