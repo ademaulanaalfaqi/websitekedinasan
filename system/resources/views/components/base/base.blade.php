@@ -17,21 +17,22 @@
 <link href="{{url('public')}}/assets/css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="{{url('public')}}/assets/js/respond.js"></script><![endif]-->
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
 <div class="page-wrapper">
-        
+
     <!-- Preloader -->
     <div class="preloader"><div class="loader"><div class="cssload-container"><div class="cssload-speeding-wheel"></div></div></div></div>
- 	
+
     @include('components.layout.header')
-    
+
     @yield('content')
-    
+
     @include('components.layout.footer')
-    
-    
+
+
 </div>
 <!--End pagewrapper-->
 
@@ -39,7 +40,7 @@
 <div class="scroll-to-top scroll-to-target" data-target=".main-header"><span class="icon fa fa-long-arrow-up"></span></div>
 
 
-<script src="{{url('public')}}/assets/js/jquery.js"></script> 
+<script src="{{url('public')}}/assets/js/jquery.js"></script>
 <script src="{{url('public')}}/assets/js/bootstrap.min.js"></script>
 <script src="{{url('public')}}/assets/js/revolution.min.js"></script>
 <script src="{{url('public')}}/assets/js/jquery.fancybox.pack.js"></script>

@@ -28,4 +28,7 @@ Route::get('pegawai-opd', [ProfilController::class, 'pegawaiopd']);
 
 Route::get('berita', [PublikasiController::class, 'berita']);
 Route::get('detail-berita/{slug}', [PublikasiController::class, 'detailberita']);
-Route::get('standar-pelayanan', [PublikasiController::class, 'standarpelayanan']);
+Route::get('artikel', [PublikasiController::class, 'artikel']);
+Route::get('detail-artikel/{slug}', [PublikasiController::class, 'detailArtikel']);
+Route::get('dokumen-publik', [PublikasiController::class, 'dokumenPublik']);
+Route::get('dokumen-kinerja', [PublikasiController::class, 'dokumenKinerja']);
