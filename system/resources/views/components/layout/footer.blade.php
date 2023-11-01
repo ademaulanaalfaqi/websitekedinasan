@@ -4,15 +4,18 @@
     <!--Footer Upper-->        
     <div class="footer-upper">
         <div class="auto-container">
-            <div class="row clearfix">
-                <div class="col-md-12">
-                    <div class="lapor text-center">
-                        <img src="{{url('public')}}/assets/images/lapor.png" alt="">
-                        <h1 style="color: #fff"><strong>SP4N-LAPOR!</strong></h1>
-                        <a href="https://www.lapor.go.id/instansi/pemerintah-kabupaten-ketapang" class="btn btn-danger" target="_blank" style="font-size: 25px"><strong>BUAT LAPORAN</strong></a>
+
+            @if (Request::is('/'))
+                <div class="row clearfix">
+                    <div class="col-md-12">
+                        <div class="lapor text-center">
+                            <img src="{{url('public')}}/assets/images/lapor.png" alt="">
+                            <h1 style="color: #fff"><strong>SP4N-LAPOR!</strong></h1>
+                            <a href="https://www.lapor.go.id/instansi/pemerintah-kabupaten-ketapang" class="btn btn-danger" target="_blank" style="font-size: 25px"><strong>BUAT LAPORAN</strong></a>
+                        </div>
                     </div>
-                </div>
-            </div> <hr>
+                </div> <hr>                
+            @endif
 
             <div class="row clearfix">
                 

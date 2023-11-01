@@ -24,8 +24,13 @@
 <div class="page-wrapper">
 
     <!-- Preloader -->
-    <div class="preloader"><div class="loader"><div class="cssload-container"><div class="cssload-speeding-wheel"></div></div></div></div>
-
+    <div class="preloader">
+        <div class="loader">
+            <div class="cssload-container">
+                <div class="cssload-speeding-wheel"></div>
+            </div>
+        </div>
+    </div>
     @include('components.layout.header')
 
     @yield('content')

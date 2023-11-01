@@ -573,7 +573,18 @@ ul,li{
 	text-transform:uppercase !important;	
 }
 
-.preloader{ position:fixed; left:0px; top:0px; width:100%; height:100%; z-index:999999; background-color:#ffffff; background-position:center center; background-repeat:no-repeat; /*background-image:url(../images/icons/preloader.GIF);*/}
+.preloader{
+	position:fixed; 
+	left:0px; 
+	top:0px; 
+	width:100%; 
+	height:100%; 
+	z-index:999999; 
+	background-color:#ffffff;
+	background-position:center center; 
+	background-repeat:no-repeat; 
+	/*background-image:url(../images/icons/preloader.GIF);*/
+	}
 
 /* ---------Page preload--------------------------------------*/
 .loader {
@@ -2131,6 +2142,7 @@ img{
 .sec-title-one h2{
 	position:relative;
     color: #012f5d;
+	font-family: 'Source Sans Pro';
     font-size: 24px;
 	font-weight:600;
     padding-bottom: 15px;
@@ -2426,7 +2438,6 @@ img{
 .service-block-two{
 	position:relative;
 	margin-bottom:50px;	
-	height: 100px;
 }
 
 .service-block-two .inner-box{
@@ -5577,6 +5588,11 @@ img{
 	margin-bottom:34px;
 }
 
+.services-content .lower-image{
+	position:relative;
+	margin-bottom:34px;
+}
+
 .services-content .bigger-image img{
 	position:relative;
 	width:100%;
@@ -7076,7 +7092,6 @@ img{
 
 .contact-info-section .info-box{
 	position:relative;
-	background:url(../images/resource/conatct-info.jpg);
 	background-position:center center;
 	background-repeat:no-repeat;
 	background-size:cover;

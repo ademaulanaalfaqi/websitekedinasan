@@ -111,25 +111,25 @@
                             </li>
                             <li class="dropdown"><a href="#">Ruang Publik</a>
                                 <ul>
-                                    <li><a href="portfolio-masonary.html">Kuisioner SKM</a></li>
-                                    <li><a href="portfolio-three-column.html">Laporan SKM</a></li>
-                                    <li><a href="portfolio-details.html">Laporan Tindak Lanjut SKM</a></li>
+                                    <li><a href="https://bit.ly/SKMKetapang" target="_blank">Kuisioner SKM</a></li>
+                                    <li><a href="{{url('laporan-skm')}}">Laporan SKM</a></li>
+                                    <li><a href="{{url('laporan-tindak-lanjut-skm')}}">Laporan Tindak Lanjut SKM</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact.html">PPID</a></li>
-                            <li><a href="contact.html">Informasi</a></li>
+                            <li><a href="{{url('ppid')}}">PPID</a></li>
+                            <li><a href="{{url('informasi')}}">Informasi</a></li>
                             <li class="dropdown"><a href="#">Galeri</a>
                                 <ul>
-                                    <li><a href="shop.html">Galeri Foto</a></li>
-                                    <li><a href="shop.html">Galeri Video</a></li>
+                                    <li><a href="{{url('foto')}}">Galeri Foto</a></li>
+                                    <li><a href="{{url('vidio')}}">Galeri Video</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact.html">Kontak</a></li>
-                            <li><a href="contact.html">FAQ</a></li>
+                            <li><a href="{{url('kontak')}}">Kontak</a></li>
+                            <li><a href="{{url('faq')}}">FAQ</a></li>
                             <li class="dropdown"><a href="#">Pengaduan</a>
                                 <ul>
-                                    <li><a href="shop.html">SP4N Laporan</a></li>
-                                    <li><a href="shop.html">Informasi Pengaduan</a></li>
+                                    <li><a href="https://www.lapor.go.id/instansi/pemerintah-kabupaten-ketapang">SP4N Laporan</a></li>
+                                    <li><a href="{{url('informasi-pengaduan')}}">Informasi Pengaduan</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -181,25 +181,25 @@
                             </li>
                             <li class="dropdown"><a href="#">Ruang Publik</a>
                                 <ul>
-                                    <li><a href="portfolio-masonary.html">Kuisioner SKM</a></li>
-                                    <li><a href="portfolio-three-column.html">Laporan SKM</a></li>
-                                    <li><a href="portfolio-details.html">Laporan Tindak Lanjut SKM</a></li>
+                                    <li><a href="https://bit.ly/SKMKetapang" target="_blank">Kuisioner SKM</a></li>
+                                    <li><a href="{{url('laporan-skm')}}">Laporan SKM</a></li>
+                                    <li><a href="{{url('laporan-skm')}}">Laporan Tindak Lanjut SKM</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact.html">PPID</a></li>
-                            <li><a href="contact.html">Informasi</a></li>
+                            <li><a href="{{url('ppid')}}">PPID</a></li>
+                            <li><a href="{{url('informasi')}}">Informasi</a></li>
                             <li class="dropdown"><a href="#">Galeri</a>
                                 <ul>
-                                    <li><a href="shop.html">Galeri Foto</a></li>
-                                    <li><a href="shop.html">Galeri Video</a></li>
+                                    <li><a href="{{url('foto')}}">Galeri Foto</a></li>
+                                    <li><a href="{{url('vidio')}}">Galeri Video</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact.html">Kontak</a></li>
-                            <li><a href="contact.html">FAQ</a></li>
+                            <li><a href="{{url('kontak')}}">Kontak</a></li>
+                            <li><a href="{{url('faq')}}">FAQ</a></li>
                             <li class="dropdown"><a href="#">Pengaduan</a>
                                 <ul>
-                                    <li><a href="shop.html">SP4N Laporan</a></li>
-                                    <li><a href="shop.html">Informasi Pengaduan</a></li>
+                                    <li><a href="https://www.lapor.go.id/instansi/pemerintah-kabupaten-ketapang">SP4N Laporan</a></li>
+                                    <li><a href="{{url('informasi-pengaduan')}}">Informasi Pengaduan</a></li>
                                 </ul>
                             </li>
                         </ul>

@@ -3,7 +3,7 @@
     <!--Title-->
     <section class="page-title" style="background-image:url({{url('public')}}/assets/images/background/17580.jpg);">
         <div class="auto-container">
-            <h1>Tentang {{$config['singkatan_website']}}</h1>
+            <h1>Tentang</h1>
         </div>
         
         <!--page-info-->
@@ -40,7 +40,7 @@
                                 <!--featured-image-box-->
                                 <div class="featured-image-box col-md-12 col-sm-12 col-xs-12">
                                     <figure class="image">
-                                        <a class="lightbox-image" href="#" title="Image Caption Here"><img src="http://kantorkite.ketapangkab.go.id/public/{{ $profil['foto_tentang'] }}" alt="" /></a>
+                                        <img src="http://kantorkite.ketapangkab.go.id/public/{{ $profil['foto_tentang'] }}" alt="" />
                                     </figure>
                                 </div>
                                 
