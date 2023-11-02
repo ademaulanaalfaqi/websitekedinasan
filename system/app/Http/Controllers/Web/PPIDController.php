@@ -6,27 +6,27 @@ use App\Http\Controllers\Controller;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
-class KontakController extends Controller
+class PPIDController extends Controller
 {
-    function kontak() {
+    function ppid() {
         $client = new Client();
 
-        try {
-            // kontak
-            $responseKontak = $client->request('GET', 'http://kantorkite.ketapangkab.go.id/api/config', [
+        try {            
+            // config
+            $responseConfig = $client->request('GET', 'http://kantorkite.ketapangkab.go.id/api/config', [
                 'headers' => [
                     'Accept' => 'application/json',
                 ],
             ]);
 
-            $dataArrayKontak = json_decode($responseKontak->getBody(), true);
-            $dataFilterKontak = collect($dataArrayKontak)->first(function ($item) {
+            $dataArrayConfig = json_decode($responseConfig->getBody(), true);
+            $dataFilterConfig = collect($dataArrayConfig)->first(function ($item) {
                 return isset($item['opd_id']) && $item['opd_id'] == '567';
             });
-            $data['kontak'] = array_slice($dataFilterKontak,  0,);
+            $data['config'] = array_slice($dataFilterConfig,  0,);
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
         }
-        return view('web.kontak.kontak', $data);
+        return view('web.ppid.ppid', $data);
     }
 }

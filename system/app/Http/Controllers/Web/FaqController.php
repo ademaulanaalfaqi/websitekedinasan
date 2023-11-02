@@ -22,10 +22,10 @@ class FaqController extends Controller
             $dataArrayFaq = json_decode($responseFaq->getBody(), true);
     
             $dataFilterFaq = array_filter($dataArrayFaq, function ($item) {
-                return isset($item['opd_id']) && $item['opd_id'] == '567';
+                return isset($item['faq_opd']) && $item['faq_opd'] == '567';
             });
-    
-            $data['faq'] = array_slice($dataFilterFaq, 0);
+            // dd($dataFilterFaq);
+            $data['list_faq'] = array_slice($dataFilterFaq, 0);
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
         }

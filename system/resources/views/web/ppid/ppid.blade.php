@@ -3,7 +3,7 @@
     <!--Title-->
     <section class="page-title" style="background-image:url({{url('public')}}/assets/images/background/17580.jpg);">
         <div class="auto-container">
-            <h1>Selayang Pandang</h1>
+            <h1>PPID</h1>
         </div>
         
         <!--page-info-->
@@ -14,7 +14,7 @@
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <ul class="bread-crumb clearfix">
                             <li><a href="{{url('/')}}">Home</a></li>
-                            <li class="active">Selayang Pandang</li>
+                            <li class="active">PPID</li>
                         </ul>
                     </div>
                 
@@ -34,8 +34,18 @@
                 	<div class="inner-box">
                     
                     	<div class="sec-title-one">
-                            <h2 style="font-size: 30px">Selayang Pandang {{$config['singkatan_website']}}</h2> <br>
-                            <h4 style="font-size: 20px" class="">{!!$profil['selayang']!!}</h4>
+                            <h2 style="font-size: 30px">PPID {{$config['singkatan_website']}}</h2> <br>
+                            {{-- <h4 style="font-size: 20px" class="">{!!$profil['selayang']!!}</h4> --}}
+                        </div>
+
+                        <div class="row clearfix">
+                            <!--service-block-->
+                            <div class="service-block col-md-12 col-sm-6 col-sm-12">
+                                <div class="inner-box">
+                                    {{-- <img src="http://kantorkite.ketapangkab.go.id/public/{{$profil['struktur_organisasi']}}" alt=""> --}}
+                                </div>
+                            </div>
+                            
                         </div>
                         
                     </div>

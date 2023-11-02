@@ -3,7 +3,7 @@
     <!--Title-->
     <section class="page-title" style="background-image:url({{url('public')}}/assets/images/background/17580.jpg);">
         <div class="auto-container">
-            <h1>Foto</h1>
+            <h1>Galeri Foto</h1>
         </div>
         
         <!--page-info-->
@@ -32,9 +32,6 @@
                 <!--Content Side-->
                 <div class="content-side col-lg-12 col-md-8 col-sm-12 col-xs-12">
                     <section class="news-outer">
-                        <div class="sec-title-one">
-                            <h2 style="font-size: 30px">Galeri Foto</h2> <br>
-                        </div>
                     	<div class="row clearfix">
                         
                             @foreach ($list_foto as $item)
@@ -58,17 +55,7 @@
                         </div>
 					</section>
 					
-                    {{-- <!-- Styled Pagination -->
-                    <div class="styled-pagination text-left padd-top-30">
-                        <ul>
-                            <li><a href="#" class="active">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">--</a></li>
-                            <li><a href="#">10</a></li>
-                            <li><a class="next" href="#"><span class="fa fa-long-arrow-right"></span></a></li>
-                        </ul>
-                    </div> --}}
+                    {{$list_foto->links()}}
                     
 				</div>
                 <!--Content Side-->

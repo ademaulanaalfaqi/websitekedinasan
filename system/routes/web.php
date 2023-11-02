@@ -9,6 +9,8 @@ use App\Http\Controllers\Web\PublikasiController;
 use App\Http\Controllers\Web\RuangPublikController;
 use App\Http\Controllers\Web\GaleriController;
 use App\Http\Controllers\Web\KontakController;
+use App\Http\Controllers\Web\PengaduanController;
+use App\Http\Controllers\Web\PPIDController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,12 +44,21 @@ Route::get('laporan-skm', [RuangPublikController::class, 'laporanskm']);
 Route::get('laporan-tindak-lanjut-skm', [RuangPublikController::class, 'laporantindaklanjut']);
 Route::get('dokumen-publik/{slug}', [RuangPublikController::class, 'dokumenpublik']);
 
+// ppid
+Route::get('ppid', [PPIDController::class, 'ppid']);
+
 // informasi
 Route::get('informasi', [InformasiController::class, 'informasi']);
 
+// galeri
 Route::get('foto', [GaleriController::class, 'foto']);
 Route::get('vidio', [GaleriController::class, 'vidio']);
 
+// kontak
 Route::get('kontak', [KontakController::class, 'kontak']);
 
+// faq
 Route::get('faq', [FaqController::class, 'faq']);
+
+// pengaduan
+Route::get('informasi-pengaduan', [PengaduanController::class, 'informasipengaduan']);

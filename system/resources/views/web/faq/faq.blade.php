@@ -38,112 +38,32 @@
                             <div class="column col-md-12 col-sm-12 col-xs-12">
                                 <div class="inner-box">
 
-                                    <div class="sec-title-one text-center">
+                                    <div class="sec-title-one">
                                         <h2>Pertanyaan sering diajukan DSP3AKB KABUPATEN KETAPANG</h2>
                                     </div>
 
                                     <!--Accordion Box-->
                                     <ul class="accordion-box">
 
-                                        <!--Block-->
-                                        <li class="accordion block wow fadeInUp" data-wow-delay="0ms"
-                                            data-wow-duration="1500ms">
-                                            <div class="acc-btn active">
-                                                <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span>
-                                                    <span class="icon icon-minus fa fa-minus"></span>
-                                                </div>Why do you
-                                                license technologies?
-                                            </div>
-                                            <div class="acc-content current">
-                                                <div class="content clearfix">
-                                                    <figure class="image"><img src="images/resource/featured-thumb-1.jpg"
-                                                            alt=""></figure>
-                                                    <p>The year is and launches the last of that americas deep space probes
-                                                        and we will do it our our way make all come true these days are all
-                                                        Happy and free these days are all to share.</p>
+                                        @foreach ($list_faq as $item)
+                                            <!--Block-->
+                                            <li class="accordion block wow fadeInUp" data-wow-delay="0ms"
+                                                data-wow-duration="1500ms">
+                                                <div class="acc-btn">
+                                                    <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span>
+                                                        <span class="icon icon-minus flaticon-minus-symbol"></span>
+                                                    </div>
+                                                    {{$item['faq_pertanyaan']}}
                                                 </div>
-                                            </div>
-                                        </li>
-
-                                        <!--Block-->
-                                        <li class="accordion block wow fadeInUp" data-wow-delay="200ms"
-                                            data-wow-duration="1500ms">
-                                            <div class="acc-btn">
-                                                <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span>
-                                                    <span class="icon icon-minus fa fa-minus"></span>
-                                                </div> Do you license
-                                                to startup companies?
-                                            </div>
-                                            <div class="acc-content">
-                                                <div class="content clearfix">
-                                                    <figure class="image"><img src="images/resource/featured-thumb-1.jpg"
-                                                            alt=""></figure>
-                                                    <p>The year is and launches the last of that americas deep space probes
-                                                        and we will do it our our way make all come true these days are all
-                                                        Happy and free these days are all to share.</p>
+                                                <div class="acc-content">
+                                                    <div class="content clearfix">
+                                                        <figure class="image"><img src="images/resource/featured-thumb-1.jpg"
+                                                                alt=""></figure>
+                                                        <p>{!!$item['faq_jawaban']!!}</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-
-                                        <!--Block-->
-                                        <li class="accordion block wow fadeInUp" data-wow-delay="200ms"
-                                            data-wow-duration="1500ms">
-                                            <div class="acc-btn">
-                                                <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span>
-                                                    <span class="icon icon-minus fa fa-minus"></span>
-                                                </div> Do you advise or
-                                                fund companies?
-                                            </div>
-                                            <div class="acc-content">
-                                                <div class="content clearfix">
-                                                    <figure class="image"><img src="images/resource/featured-thumb-1.jpg"
-                                                            alt=""></figure>
-                                                    <p>The year is and launches the last of that americas deep space probes
-                                                        and we will do it our our way make all come true these days are all
-                                                        Happy and free these days are all to share.</p>
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <!--Block-->
-                                        <li class="accordion block wow fadeInUp" data-wow-delay="200ms"
-                                            data-wow-duration="1500ms">
-                                            <div class="acc-btn">
-                                                <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span>
-                                                    <span class="icon icon-minus fa fa-minus"></span>
-                                                </div> How do we manage
-                                                and monitor the license agreement?
-                                            </div>
-                                            <div class="acc-content">
-                                                <div class="content clearfix">
-                                                    <figure class="image"><img src="images/resource/featured-thumb-1.jpg"
-                                                            alt=""></figure>
-                                                    <p>The year is and launches the last of that americas deep space probes
-                                                        and we will do it our our way make all come true these days are all
-                                                        Happy and free these days are all to share.</p>
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <!--Block-->
-                                        <li class="accordion block wow fadeInUp" data-wow-delay="400ms"
-                                            data-wow-duration="1500ms">
-                                            <div class="acc-btn">
-                                                <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span>
-                                                    <span class="icon icon-minus fa fa-minus"></span>
-                                                </div> Where can I find
-                                                more information?
-                                            </div>
-                                            <div class="acc-content">
-                                                <div class="content clearfix">
-                                                    <figure class="image"><img src="images/resource/featured-thumb-1.jpg"
-                                                            alt=""></figure>
-                                                    <p>The year is and launches the last of that americas deep space probes
-                                                        and we will do it our our way make all come true these days are all
-                                                        Happy and free these days are all to share.</p>
-                                                </div>
-                                            </div>
-                                        </li>
+                                            </li>                                            
+                                        @endforeach
 
                                     </ul><!--End Accordion Box-->
                                 </div>
