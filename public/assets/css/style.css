@@ -1970,7 +1970,7 @@ img{
 
 .service-style-one{
 	position:relative;
-	padding:130px 0px 100px;
+	padding:60px 0px 30px;
 }
 
 .service-style-one .box-column{
@@ -2136,7 +2136,6 @@ img{
 
 .sec-title-one{
 	position:relative;
-	margin-bottom:60px;
 }
 
 .sec-title-one h2{
@@ -2732,7 +2731,7 @@ img{
 
 .default-section{
 	position:relative;
-	padding:100px 0px 70px;
+	padding:60px 0px 30px;
 }
 
 .default-section .column{
@@ -5197,9 +5196,9 @@ img{
 	padding-top:15px;
 }
 
-.sidebar-page-container .news-style-two .inner-box .lower-content{
-	padding-top:25px;	
-}
+/* .sidebar-page-container .news-style-two .inner-box .lower-content{
+	padding-top:25px;
+} */
 
 .news-style-two .inner-box .lower-content p{
 	position:relative;
@@ -5627,7 +5626,7 @@ img{
 
 .sidebar-page-container{
 	position:relative;
-	padding:120px 0px 90px;
+	padding:40px 0px 30px;
 }
 
 .sidebar-page-container .sidebar,

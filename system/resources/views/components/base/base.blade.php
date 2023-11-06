@@ -8,8 +8,8 @@
 <link href="{{url('public')}}/assets/css/revolution-slider.css" rel="stylesheet">
 <link href="{{url('public')}}/assets/css/style.css" rel="stylesheet">
 <!--Favicon-->
-<link rel="shortcut icon" href="{{url('public')}}/assets/images/favicon.ico" type="image/x-icon">
-<link rel="icon" href="{{url('public')}}/assets/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="{{url('public')}}/assets/images/logo-ktp.png" type="image/x-icon">
+<link rel="icon" href="{{url('public')}}/assets/images/logo-ktp.png" type="image/x-icon">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,6 @@
 <link href="{{url('public')}}/assets/css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="{{url('public')}}/assets/js/respond.js"></script><![endif]-->
-@vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>

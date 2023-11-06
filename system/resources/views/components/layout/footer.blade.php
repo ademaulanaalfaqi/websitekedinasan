@@ -86,10 +86,18 @@
         <div class="auto-container">
             <div class="row clearfix">
                 <!--Copyright-->
-                <div class="col-md-12 col-sm-6 col-xs-12">
-                    <div class="copyright text-center">2022 - @if(date("Y") > '2022') {{date("Y")}} @endif &copy; Brighton. </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="copyright text-center">2022 - @if(date("Y") > '2022') {{date("Y")}} @endif &copy; {{$config['singkatan_website']}}. </div>
                 </div>
-            
+                
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <ul class="footer-bottom-social">
+                        <li><a href="#"><span class="fa-brands fa-facebook"></span></a></li>
+                        <li><a href="#"><span class="fa-brands fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fa-brands fa-instagram"></span></a></li>
+                        <li><a href="#"><span class="fa-brands fa-youtube"></span></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

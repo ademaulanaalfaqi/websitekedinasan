@@ -33,9 +33,7 @@
                         <div class="sidebar-widget download-links">
                             <div class="sec-title-seven"><h2>Download Dokumen</h2></div>
                             <ul class="files">
-                            	<li><a href="#"><span class="fa fa-file-pdf-o"></span> Nama File .PDF</a></li>
-                                <li><a href="#"><span class="fa fa-file-word-o"></span> Nama File .DOC</a></li>
-                                <li><a href="#"><span class="fa fa-file-powerpoint-o"></span> Nama File .PPT</a></li>
+                            	<li><a href="#"><span class="fa fa-file"></span> Nama File </a></li>
                             </ul>
 
                         </div>

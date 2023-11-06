@@ -38,16 +38,19 @@ Route::get('pegawai-opd', [ProfilController::class, 'pegawaiopd']);
 Route::get('berita', [PublikasiController::class, 'berita']);
 Route::get('detail-berita/{slug}', [PublikasiController::class, 'detailberita']);
 Route::get('artikel', [PublikasiController::class, 'artikel']);
-Route::get('detail-artikel/{slug}', [PublikasiController::class, 'detailArtikel']);
+Route::get('artikel/detail-artikel/{slug}', [PublikasiController::class, 'detailArtikel']);
 Route::get('dokumen-publik', [PublikasiController::class, 'dokumenPublik']);
+Route::get('dokumen-publik/detail-dokumen/{slug}', [PublikasiController::class, 'detaildokumen']);
 Route::get('dokumen-kinerja', [PublikasiController::class, 'dokumenKinerja']);
-
+Route::get('dokumen-kinerja/detail-dokumen/{slug}', [PublikasiController::class, 'detaildokumen']);
 Route::get('standar-pelayanan', [PublikasiController::class, 'standarpelayanan']);
+Route::get('standar-pelayanan/detail-dokumen/{slug}', [PublikasiController::class, 'detaildokumen']);
 
 // ruang publik
 Route::get('laporan-skm', [RuangPublikController::class, 'laporanskm']);
+Route::get('laporan-skm/detail-dokumen/{slug}', [PublikasiController::class, 'detaildokumen']);
 Route::get('laporan-tindak-lanjut-skm', [RuangPublikController::class, 'laporantindaklanjut']);
-Route::get('dokumen-publik/{slug}', [RuangPublikController::class, 'dokumenpublik']);
+Route::get('laporan-tindak-lanjut-skm/detail-dokumen/{slug}', [PublikasiController::class, 'detaildokumen']);
 
 // ppid
 Route::get('ppid', [PPIDController::class, 'ppid']);

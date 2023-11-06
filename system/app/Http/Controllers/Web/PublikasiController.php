@@ -11,6 +11,27 @@ use Illuminate\Support\Collection;
 
 class PublikasiController extends Controller
 {
+    function detaildokumen($slug) {
+        $client = new Client();
+
+        try {
+            // dokumen publik
+            $responseDokumenPublik = $client->request('GET', 'http://kantorkite.ketapangkab.go.id/api/publikasi', [
+                'headers' => [
+                    'Accept' => 'application/json',
+                ],
+            ]);
+
+            $dataArrayDokumenPublik = json_decode($responseDokumenPublik->getBody(), true);
+            $dataDokumenPublik = collect($dataArrayDokumenPublik);
+            $dataFilterDokumenPublik = $dataDokumenPublik->where('slug', $slug)->first();
+            $data['dokumen_publik'] = $dataFilterDokumenPublik;
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
+        return view('web.publikasi.detail-dokumen', $data);
+    }
+
     function berita()
     {
         $client = new Client();
@@ -145,6 +166,43 @@ class PublikasiController extends Controller
             return response()->json(['error' => $e->getMessage()], 500);
         }
         return view('web.publikasi.detail-artikel', $data);
+    }
+
+    function standarpelayanan()
+    {
+        $client = new Client();
+
+        try {
+            // config
+            $responseConfig = $client->request('GET', 'http://kantorkite.ketapangkab.go.id/api/config', [
+                'headers' => [
+                    'Accept' => 'application/json',
+                ],
+            ]);
+
+            $dataArrayConfig = json_decode($responseConfig->getBody(), true);
+            $dataFilterConfig = collect($dataArrayConfig)->first(function ($item) {
+                return isset($item['opd_id']) && $item['opd_id'] == '567' ;
+            });
+            $data['config'] = array_slice($dataFilterConfig,  0,);
+
+            // dokumen standar pelayanan
+            $responseDokumen = $client->request('GET', 'http://kantorkite.ketapangkab.go.id/api/publikasi', [
+                'headers' => [
+                    'Accept' => 'application/json',
+                ],
+            ]);
+
+            $dataArrayDokumen = json_decode($responseDokumen->getBody(), true);
+            $dataFilterDokumen = array_filter($dataArrayDokumen,function ($item) {
+                return isset($item['opd_id']) && $item['opd_id'] == '567' && $item['kategori_publikasi'] == 'Standar Pelayanan';
+            });
+            $data['list_standar_pelayanan'] = array_slice($dataFilterDokumen,  0,);
+
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
+        return view('web.publikasi.standar-pelayanan', $data); 
     }
 
     function dokumenPublik()

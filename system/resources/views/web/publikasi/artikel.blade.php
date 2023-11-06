@@ -41,7 +41,7 @@
                                 <div class="news-style-two col-md-4 col-sm-6 col-xs-12">
                                     <div class="inner-box" style="height: 420px">
                                         <figure class="image" style="width: auto; height: 240px; overflow: hidden;">
-                                            <a href="{{url('detail-artikel', $item['slug'])}}"><img style="width: 100%; height: 100%; object-fit: cover;" src="http://kantorkite.ketapangkab.go.id/public/{{$item['foto']}}" alt="" /></a>
+                                            <a href="{{url('artikel/detail-artikel', $item['slug'])}}"><img style="width: 100%; height: 100%; object-fit: cover;" src="http://kantorkite.ketapangkab.go.id/public/{{$item['foto']}}" alt="" /></a>
 
                                             <div class="date">
                                                 {{$item['created_at']}}
@@ -51,9 +51,9 @@
 
                                         <!--lower-content-->
                                         <div class="lower-content">
-                                            <h3><a href="{{url('detail-artikel', $item['slug'])}}">{{$item['judul_artikel']}}</a></h3>
+                                            <h3><a href="{{url('artikel/detail-artikel', $item['slug'])}}">{{$item['judul_artikel']}}</a></h3>
 
-                                            <a class="read-more" href="{{url('detail-artikel', $item['slug'])}}">READ MORE <span class="fa fa-angle-double-right"></span></a>
+                                            <a class="read-more" href="{{url('artikel/detail-artikel', $item['slug'])}}">READ MORE <span class="fa fa-angle-double-right"></span></a>
                                         </div>
 
                                     </div>
@@ -63,17 +63,8 @@
                         </div>
 					</section>
 
-                    {{-- <!-- Styled Pagination -->
-                    <div class="styled-pagination text-left padd-top-30">
-                        <ul>
-                            <li><a href="#" class="active">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">--</a></li>
-                            <li><a href="#">10</a></li>
-                            <li><a class="next" href="#"><span class="fa fa-long-arrow-right"></span></a></li>
-                        </ul>
-                    </div> --}}
+                    <!-- Styled Pagination -->
+                    
 
 				</div>
                 <!--Content Side-->

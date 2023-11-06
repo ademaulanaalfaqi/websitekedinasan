@@ -46,10 +46,12 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Mark</td>
-                                            </tr>
+                                            @foreach ($list_standar_pelayanan as $item)
+                                                <tr>
+                                                    <th scope="row">{{$loop->iteration}}</th>
+                                                    <td><a href="{{url('standar-pelayanan/detail-dokumen', $item['slug'])}}">{{$item['judul_publikasi']}}</a></td>
+                                                </tr>                                                
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

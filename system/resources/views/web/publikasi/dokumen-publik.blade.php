@@ -24,7 +24,7 @@
                                             @foreach ($list_dokumenPel as $item)
                                                 <tr>
                                                     <th scope="row">{{$loop->iteration}}</th>
-                                                    <td><a href="{{url('detail-dokumen', $item['slug'])}}">{{$item['judul_publikasi']}}</a></td>
+                                                    <td><a href="{{url('dokumen-publik/detail-dokumen', $item['slug'])}}">{{$item['judul_publikasi']}}</a></td>
                                                 </tr>
                                             @endforeach
                                         </tbody>

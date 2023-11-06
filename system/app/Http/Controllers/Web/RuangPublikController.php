@@ -34,7 +34,7 @@ class RuangPublikController extends Controller
     
             $dataArrayLaporanSKM = json_decode($responseLaporanSKM->getBody(), true);    
             $dataFilterLaporanSKM = array_filter($dataArrayLaporanSKM, function ($item) {
-                return isset($item['opd_id']) && $item['opd_id'] == '567';
+                return isset($item['opd_id']) && $item['opd_id'] == '533';
             });
             $dataLaporanSKM = collect($dataFilterLaporanSKM)->where('kategori_publikasi', 'Laporan SKM')->all();
             // dd($dataLaporanSKM);
@@ -43,27 +43,6 @@ class RuangPublikController extends Controller
             return response()->json(['error' => $e->getMessage()], 500);
         }
         return view('web.ruang-publik.laporan-skm', $data);
-    }
-
-    function dokumenpublik($slug) {
-        $client = new Client();
-
-        try {
-            // dokumen publik
-            $responseDokumenPublik = $client->request('GET', 'http://kantorkite.ketapangkab.go.id/api/publikasi', [
-                'headers' => [
-                    'Accept' => 'application/json',
-                ],
-            ]);
-
-            $dataArrayDokumenPublik = json_decode($responseDokumenPublik->getBody(), true);
-            $dataDokumenPublik = collect($dataArrayDokumenPublik);
-            $dataFilterDokumenPublik = $dataDokumenPublik->where('slug', $slug)->first();
-            $data['dokumen_publik'] = $dataFilterDokumenPublik;
-        } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
-        }
-        return view('web.ruang-publik.dokumen-publik', $data);
     }
 
     function laporantindaklanjut() {

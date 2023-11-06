@@ -49,7 +49,7 @@
                                             @foreach ($list_laporanskm as $item)
                                                 <tr>
                                                     <th scope="row">{{$loop->iteration}}</th>
-                                                    <td><a href="{{url('dokumen-publik', $item['slug'])}}">{{$item['judul_publikasi']}}</a></td>
+                                                    <td><a href="{{url('laporan-skm/detail-dokumen', $item['slug'])}}">{{$item['judul_publikasi']}}</a></td>
                                                 </tr>                                                
                                             @endforeach
                                         </tbody>
